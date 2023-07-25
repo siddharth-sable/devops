@@ -33,13 +33,16 @@ def terminate_instances(instance_ids):
     except Exception as e:
         print(f"Error terminating instances: {e}")
 
+instances = get_all_instance_ids()
+responce = terminate_instances(instances)
+print(responce)
 
 
-myobj = datetime.now()
-if myobj.hour == 22:
-    instances = get_all_instance_ids()
-    responce = terminate_instances(instances)
-    print(responce)
+# myobj = datetime.now()
+# if myobj.hour == 22:
+#     instances = get_all_instance_ids()
+#     responce = terminate_instances(instances)
+#     print(responce)
 
 
 
